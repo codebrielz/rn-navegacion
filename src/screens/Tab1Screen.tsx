@@ -1,14 +1,18 @@
 import React, { useEffect } from 'react';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { Text, View } from 'react-native';
+import { styles } from '../theme/appTheme';
+
 
 export const Tab1Screen = () => {
     useEffect(() => {
-      console.log('Tab1Screen effect');
+        console.log('Tab1Screen effect');
     }, []);
-    
+
     return (
-        <View>
-            <Text>Tab1Screen</Text>
+        <View style={styles.globalMargin}>
+            <Text style={styles.title}>Iconos</Text>
+                <Icon name="rocket-outline" size={30} color="#900" />
         </View>
     );
 };

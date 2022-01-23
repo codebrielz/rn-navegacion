@@ -4,14 +4,10 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
 import { LogBox } from 'react-native';
-import { DrawerNavigator } from './src/navigator/DrawerNavigator';
+// import { DrawerNavigator } from './src/navigator/DrawerNavigator';
 import { DrawerNav } from './src/navigator/DrawerNav';
 
-LogBox.ignoreLogs([
-  "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
-  '[new NativeEventEmitter]'
-]);
-LogBox.ignoreAllLogs(); //Ignore all log notifications
+LogBox.ignoreLogs(['Sending','new NativeEventEmitter()','[react-native-gesture-handler]'],);
 export const App = () => {
   return (
     <NavigationContainer>

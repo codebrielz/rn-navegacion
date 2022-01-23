@@ -12,11 +12,11 @@ export const Pagina3Screen = ({navigation}:Props) => {
 
             <Button 
                 title='Regresar'
-                onPress={()=>navigation.pop()}
+                onPress={()=>navigation.pop()} //popToTop vuelve a la carta anterior
             />
             <Button 
                 title='Ir a la Pagina1'
-                onPress={()=>navigation.popToTop()}
+                onPress={()=>navigation.popToTop()} //popToTop vuelve a la primera carta
             />
         </View>
     );

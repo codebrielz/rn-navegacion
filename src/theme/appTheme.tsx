@@ -10,7 +10,8 @@ export const styles = StyleSheet.create({
     },
     title:{
         fontSize:30,
-        marginBottom:10
+        marginBottom:10,
+        color:'black'
     },
     botonGrande:{
         width:100,
@@ -39,9 +40,10 @@ export const styles = StyleSheet.create({
         marginHorizontal:50,
     },
     menuBoton:{
-        marginVertical:10
+        margin:10,
     },
     menuTexto:{
-        fontSize:20
+        fontSize:20,
+        color:'black'
     }
 });

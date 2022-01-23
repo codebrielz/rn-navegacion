@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentScrollView } from '@react-navigation/drawer';
 import { SettingsScreen } from '../screens/SettingsScreen';
@@ -22,7 +23,9 @@ export const DrawerNav = () => {
       drawerContent={(props) => <MenuInterno {...props} />} //{...props} <-- desestructuramos las props que vienen del funtional component
     >
       {/* Definicion de rutas de mi aplicación */}
-      <Drawer.Screen name="Tabs" component={Tabs} /> 
+      {/* Tabs contiene las rutas de la barra inferior de mi aplicacion */}
+      <Drawer.Screen name="Tabs" component={Tabs} />
+       {/*SettingsScreen es otra pantalla distinta a nivel de Tabs  */}
       <Drawer.Screen name="SettingsScreen" component={SettingsScreen} /> 
     </Drawer.Navigator>
   );
@@ -54,14 +57,14 @@ const MenuInterno = ({ navigation }: DrawerContentComponentProps) => {
           style={styles.menuBoton}
           onPress={() => navigation.navigate('Tabs')} //<-- Path al que quiero navegar (Anteriormente en este archivo tienen que estar definidas, mirar más arriba para verlo)
         >
-          <Text style={styles.menuTexto}>Navegacion</Text>
+          <Text style={styles.menuTexto}><Icon name='home-outline' size={25} color='#000' /> Navegacion</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.menuBoton} >
           <Text
             style={styles.menuTexto}
             onPress={() => navigation.navigate('SettingsScreen')} //<-- Path al que quiero navegar (Anteriormente en este archivo tienen que estar definidas, mirar más arriba para verlo)
-          >Ajustes</Text>
+          ><Icon name='construct-outline' size={25} color='#000' /> Ajustes</Text>
         </TouchableOpacity>
       </View>
 
